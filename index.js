@@ -224,9 +224,15 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
-}
+function getRandomFlavors(arr1, arr2, arr3, arr4){
+    const randomFlavors = [];
+    let totalFlavors = [...arr1,...arr2,...arr3,...arr4];
+    for (let i = 0; i < 31; i++){
+      let random = Math.floor(Math.random() * totalFlavors.length);
+      randomFlavors[i] = totalFlavors[random];
+    }
+    return randomFlavors;
+  }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
